@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,16 +19,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hangman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uc8-ET-671">
-                                <rect key="frame" x="183" y="266" width="234" height="67"/>
+                                <rect key="frame" x="183" y="125" width="212" height="59"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0a-Ro-eL7">
+                                <rect key="frame" x="232" y="285" width="115" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Uc8-ET-671" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="0lQ-Ha-oCQ"/>
-                            <constraint firstItem="Uc8-ET-671" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="scD-ZE-VSH"/>
+                            <constraint firstItem="B0a-Ro-eL7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="BKF-xk-MH6"/>
+                            <constraint firstItem="Uc8-ET-671" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="0.5" id="scD-ZE-VSH"/>
+                            <constraint firstItem="B0a-Ro-eL7" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="vJY-WE-Ohn"/>
                         </constraints>
                     </view>
                 </viewController>

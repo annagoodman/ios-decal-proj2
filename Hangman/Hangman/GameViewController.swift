@@ -206,6 +206,7 @@ class GameViewController: UIViewController {
     
     func startOverHandler(alert: UIAlertAction!) {
         self.viewDidLoad()
+        
     }
     
     func changeWordText() {
@@ -228,32 +229,68 @@ class GameViewController: UIViewController {
         pictureView.image = UIImage(named: "hangman1.gif")
         
         aButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        aButton.alpha = 1
         bButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        bButton.alpha = 1
         cButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        cButton.alpha = 1
         dButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        dButton.alpha = 1
         eButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        eButton.alpha = 1
         fButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        fButton.alpha = 1
         gButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        gButton.alpha = 1
         hButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        hButton.alpha = 1
         iButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        iButton.alpha = 1
         jButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        jButton.alpha = 1
         kButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        kButton.alpha = 1
         lButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        lButton.alpha = 1
         mButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        mButton.alpha = 1
         nButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        nButton.alpha = 1
         oButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        oButton.alpha = 1
         pButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        pButton.alpha = 1
         qButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        qButton.alpha = 1
         rButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        rButton.alpha = 1
         sButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        sButton.alpha = 1
         tButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        tButton.alpha = 1
         uButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        uButton.alpha = 1
         vButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        vButton.alpha = 1
         wButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        wButton.alpha = 1
         xButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        xButton.alpha = 1
         yButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        yButton.alpha = 1
         zButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        zButton.alpha = 1
         //add all the button actions
+        
+        //reset things
+        wordArray = []
+        inverseArray = []
+        triedLetters = ""
+        wordText = ""
+        strikes = 1
+        incorrectLetters.text = triedLetters
+        
+        
         //initialize both the wordArray and the Inverse array (word array will be "- " and inverse array will be the letter
         for character in phrase.characters {
             if character == " " {
